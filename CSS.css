@@ -1,0 +1,125 @@
+.code_form {
+    width: 0%;
+    height: 590px;
+    background-color: rgb(234, 241, 244);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .card-header {
+    padding: 50px;
+    background-color: rgb(244, 249, 251);
+  }
+  
+  .code_form.active {
+    opacity: 1;
+    z-index: 1;
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .code_form .input_box {
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .code_form .input_box label {
+    font-size: 19px;
+    padding: 10px;
+  }
+  
+  .code_form .input_box input {
+    border: none;
+  }
+  
+  .code_form .input_box .btn_form {
+    margin: 20px;
+    padding-left: 60%;
+    padding-top: 10px;
+  }
+  
+  .code_form h1 {
+    text-align: center;
+    font-size: 24px;
+    padding-top: 14px;
+  }
+  
+  .code_form .close_icon {
+    font-size: 20px;
+    padding: 10%;
+    padding-left: 96%;
+    cursor: pointer;
+    color: rgb(252, 151, 151);
+  }
+  
+  .card-footer {
+    padding: 50px;
+    background-color: rgb(244, 249, 251);
+  }
+  
+  footer {
+    font-size: 10px;
+    background-color: rgb(244, 249, 251);
+  }
+  
+  .student-box {
+    background-color: rgb(231, 231, 231);
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative; /* Ajout de la propriété position pour positionner l'image à l'intérieur */
+  }
+  
+  .student-box img {
+    width: 80px; /* Définir la largeur de l'image */
+    height: 80px; /* Définir la hauteur de l'image */
+    object-fit: cover; /* Ajuster l'image pour remplir complètement le conteneur en conservant son ratio d'aspect */
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(0%, -105%);
+    padding-bottom: 0px;
+    border-radius: 10px;
+    
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+  }
+  /* Ajout des règles de style pour la mise en page responsive */
+  @media screen and (max-width: 768px) {
+    .code_form.active {
+      width: 70%;
+    }
+    .code_form .input_box .btn_form {
+        margin: 15px;
+        padding-left: 40%;
+        padding-top: 10px;
+    }
+    .code_form .close_icon {
+        font-size: 18px;
+        padding: 8%;
+        padding-left: 94%;
+        cursor: pointer;
+        color: rgb(252, 151, 151);
+      }
+      
+  }
+
+  @media screen and (max-width: 576px) {
+    .code_form.active {
+      width: 80%;
+    }
+    .code_form .input_box .btn_form {
+        margin: 10px;
+        padding-left: 30%;
+        padding-top: 9px;
+    }
+  }
